@@ -1,6 +1,7 @@
 // Imports at the top of your file
 const path = require("path");
 const fs = require("fs");
+const prompt = require("prompt-sync")();
 
 // Path Example
 const filePath = "/users/test/file.txt";
@@ -14,7 +15,7 @@ console.log(`FullPath: ${fullPath}`);
 
 // FS Example
 const filePathHello = path.join(__dirname, "hello.txt");
-const helloContent = "Hello from Node.js";
+const helloContent = prompt("Enter your text here: ");
 
 try {
   fs.writeFileSync(filePathHello, helloContent);
